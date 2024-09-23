@@ -1,5 +1,3 @@
-package com.khanhtran0111;
-
 import org.junit.Test;
 import org.junit.Assert;
 
