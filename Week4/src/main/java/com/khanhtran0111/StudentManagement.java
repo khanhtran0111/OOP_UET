@@ -80,14 +80,6 @@ public class StudentManagement {
     }
 
     public static void main(String[] args) {
-        StudentManagement list = new StudentManagement();
-        Student s1 = new Student("Tran Gia Khanh", "23021599", "23021599@vnu.edu.vn");
-        Student s2 = new Student("Le Duc Anh", "23021474", "23021474@vnu.edu.vn");
-        Student s3 = new Student("Pham Cong Khang", "23021595", "23021595@vnu.edu.vn");
 
-        list.addStudent(s1);
-        list.addStudent(s2);
-        list.addStudent(s3);
-        System.out.println(list.studentsByGroup());
     }
 }

@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c8b51a3-c673-43f9-bb47-3965ee709aa8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Week5/src/main/java/com/khanhtran0111/GCD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/main/java/com/khanhtran0111/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/test/java/com/khanhtran0111/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Week3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/khanhtran0111/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/khanhtran0111/StudentManagement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +51,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/UET/I.2024-2025/OOP_UET/Week3"
+    "last_opened_file_path": "D:/UET/I.2024-2025/OOP_UET/test"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,8 +74,10 @@
       </method>
     </configuration>
     <configuration name="StudentManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.khanhtran0111.StudentManagement" />
-      <module name="Week5" />
+      <module name="Week4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.khanhtran0111.*" />
