@@ -1,6 +1,5 @@
 package com.khanhtran0111;
 
-
 // Import your library
 // Do not change the name of the Solution class
 public class PhanSo {
@@ -126,5 +125,6 @@ public class PhanSo {
 
     }
 }
+
 
 
