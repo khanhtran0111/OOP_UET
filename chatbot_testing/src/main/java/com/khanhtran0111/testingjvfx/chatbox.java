@@ -22,7 +22,7 @@ public class chatbox extends Application {
     private TextField userInput;
     private Button sendButton;
 
-    private final String OPENAI_API_KEY = "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";
+    private final String OPENAI_API_KEY = "";
 
     @Override
     public void start(Stage primaryStage) {
