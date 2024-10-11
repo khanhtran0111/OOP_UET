@@ -11,7 +11,7 @@ public class AppController {
     @FXML
     private TextArea chatarea;
     @FXML
-    private TextField userinput; //user chat import to gemini
+    private TextField userInput;
     @FXML
     private Button sendButton;
 
@@ -19,6 +19,7 @@ public class AppController {
 
     public void initialize(){
         chatbot = new ChatBot();
+        System.out.println(userInput);
     }
 
     @FXML
@@ -34,10 +35,10 @@ public class AppController {
     }
 
     private void sendMessage(){
-        String message = userinput.getText();
+        String message = userInput.getText();
         if(message.isEmpty()) return;
         chatarea.appendText("You: " + message + "\n");
-        userinput.clear();
+        userInput.clear();
 
         //call gemini chat
         try{
