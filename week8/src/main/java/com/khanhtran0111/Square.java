@@ -1,63 +1,30 @@
 package com.khanhtran0111;
 
 public class Square extends Rectangle {
+
     public Square() {
+        super(new Point(0, 0), 0, 0, "black", false); // Default constructor
     }
 
     public Square(double side) {
-        setLength(side);
+        super(new Point(0, 0), side, side, "black", false); // Constructor with side
     }
 
-    /**
-     * An especially short bit of Javadoc.
-     */
-    public Square(double side, String color, boolean filled) {
-        setLength(side);
-        super.setColor(color);
-        super.setFilled(filled);
-    }
-
-    /**
-     * An especially short bit of Javadoc.
-     */
     public Square(Point topLeft, double side, String color, boolean filled) {
-        setLength(side);
-        super.setColor(color);
-        super.setFilled(filled);
-        super.setTopLeft(topLeft);
-    }
-
-    public void setSide(double side) {
-        setLength(side);
+        super(topLeft, side, side, color, filled); // Call Rectangle constructor
     }
 
     public double getSide() {
-        return getLength();
+        return getWidth(); // For a square, width and length are the same
     }
 
-    @Override
-    public void setLength(double side) {
-        super.setLength(side);
-        super.setWidth(side);
-    }
-
-    @Override
-    public void setWidth(double side) {
-        super.setLength(side);
-        super.setWidth(side);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
+    public void setSide(double side) {
+        setWidth(side); // Set both width and length to the same value
+        setLength(side);
     }
 
     @Override
     public String toString() {
-        Point topLeft = super.getTopLeft();
-        return "Square[topLeft=" + topLeft
-                + ",side=" + (double) Math.round(getSide() * 10) / 10
-                + ",color=" + getColor()
-                + ",filled=" + isFilled() + "]";
+        return "Square[topLeft=" + topLeft + ", side=" + getSide() + ", color=" + getColor() + ", filled=" + isFilled() + "]";
     }
 }

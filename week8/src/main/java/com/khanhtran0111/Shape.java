@@ -1,12 +1,14 @@
 package com.khanhtran0111;
 
+import java.awt.Graphics;
+
 public abstract class Shape {
     protected String color;
     protected boolean filled;
+    protected double velocityX = 1.0;  // Movement speed on X-axis
+    protected double velocityY = 1.0;  // Movement speed on Y-axis
 
-    public Shape() {
-
-    }
+    public Shape() {}
 
     public Shape(String color, boolean filled) {
         this.color = color;
@@ -29,16 +31,14 @@ public abstract class Shape {
         this.filled = filled;
     }
 
+    // Abstract methods to get area, perimeter, and to draw shape
     public abstract double getArea();
+    public abstract double getPerimeter();
+    public abstract void draw(Graphics g); // Added abstract method for drawing
+    public abstract void move();            // Abstract method for movement
 
-    abstract double getPerimeter();
-
-    /**
-     * An especially short bit of Javadoc.
-     */
+    @Override
     public String toString() {
-        return "Shape[" + "color='" + color
-                + ", filled=" + filled
-                + ']';
+        return "Shape[color=" + color + ", filled=" + filled + "]";
     }
 }

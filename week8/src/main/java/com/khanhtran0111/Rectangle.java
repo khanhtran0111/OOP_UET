@@ -1,40 +1,21 @@
 package com.khanhtran0111;
-
-import java.util.Objects;
+import java.awt.*;
 
 public class Rectangle extends Shape {
     protected double width;
     protected double length;
     protected Point topLeft = new Point(0, 0);
 
-    /**
-     * An especially short bit of Javadoc.
-     */
-    public Rectangle() {
-    }
+    // Default constructor
+    public Rectangle() {}
 
-    ;
-
-    /**
-     * An especially short bit of Javadoc.
-     */
+    // Constructor with width and length
     public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
     }
 
-    /**
-     * An especially short bit of Javadoc.
-     */
-    public Rectangle(double width, double length, String color, boolean filled) {
-        super(color, filled);
-        this.width = width;
-        this.length = length;
-    }
-
-    /**
-     * An especially short bit of Javadoc.
-     */
+    // Constructor with all parameters
     public Rectangle(Point topLeft, double width, double length, String color, boolean filled) {
         super(color, filled);
         this.width = width;
@@ -42,28 +23,24 @@ public class Rectangle extends Shape {
         this.topLeft = topLeft;
     }
 
+    // Getter for width
     public double getWidth() {
         return width;
     }
 
+    // Setter for width
     public void setWidth(double width) {
         this.width = width;
     }
 
+    // Getter for length
     public double getLength() {
         return length;
     }
 
+    // Setter for length
     public void setLength(double length) {
         this.length = length;
-    }
-
-    public Point getTopLeft() {
-        return topLeft;
-    }
-
-    public void setTopLeft(Point point) {
-        this.topLeft = point;
     }
 
     @Override
@@ -73,38 +50,23 @@ public class Rectangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        return (width + length) * 2;
+        return 2 * (width + length);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Rectangle) {
-            Rectangle rectangle = (Rectangle) obj;
-            if (topLeft.equals(rectangle.topLeft)
-                    && (width - rectangle.width) == 0
-                    && (length - rectangle.length) == 0) {
-                return true;
-            }
-        }
-        return false;
+    public void move() {
+        topLeft.setPointX(topLeft.getPointX() + velocityX); // Update X position
+        topLeft.setPointY(topLeft.getPointY() + velocityY); // Update Y position
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(length, width, topLeft);
+    public void draw(Graphics g) {
+        g.setColor(Color.decode(color)); // Set color
+        g.drawRect((int) topLeft.getPointX(), (int) topLeft.getPointY(), (int) width, (int) length);
     }
 
-    /**
-     * An especially short bit of Javadoc.
-     */
+    @Override
     public String toString() {
-        String color = getColor();
-        boolean filled = isFilled();
-        String s = topLeft.toString();
-        return "Rectangle[topLeft=" + s
-                + ",width=" + (double) Math.round(width * 10) / 10
-                + ",length=" + (double) Math.round(length * 10) / 10
-                + ",color=" + color
-                + ",filled=" + filled + "]";
+        return "Rectangle[topLeft=" + topLeft + ", width=" + width + ", length=" + length + "]";
     }
 }
