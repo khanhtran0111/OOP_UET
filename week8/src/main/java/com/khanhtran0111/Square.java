@@ -1,6 +1,40 @@
 package com.khanhtran0111;
 
 public class Square extends Rectangle {
+    public Square() {
+    }
+
+    public Square(double side) {
+        setLength(side);
+    }
+
+    /**
+     * An especially short bit of Javadoc.
+     */
+    public Square(double side, String color, boolean filled) {
+        setLength(side);
+        super.setColor(color);
+        super.setFilled(filled);
+    }
+
+    /**
+     * An especially short bit of Javadoc.
+     */
+    public Square(Point topLeft, double side, String color, boolean filled) {
+        setLength(side);
+        super.setColor(color);
+        super.setFilled(filled);
+        super.setTopLeft(topLeft);
+    }
+
+    public void setSide(double side) {
+        setLength(side);
+    }
+
+    public double getSide() {
+        return getLength();
+    }
+
     @Override
     public void setLength(double side) {
         super.setLength(side);
@@ -13,50 +47,17 @@ public class Square extends Rectangle {
         super.setWidth(side);
     }
 
-    public Square() {
-
-    }
-
-    public Square(double side) {
-        super(side, side);
-    }
-
-    /**
-     * An especially short bit of Javadoc.
-     */
-    public Square(double side, String color, boolean filled) {
-        super(side, side);
-        super.color = color;
-        super.filled = filled;
-    }
-
-    public double getSide() {
-        return getLength();
-    }
-
-    public void setSide(double side) {
-        super.setWidth(side);
-        super.setLength(side);
-    }
-
     @Override
-    public double getArea() {
-        return getSide() * getSide();
+    public boolean equals(Object o) {
+        return super.equals(o);
     }
 
-    @Override
-    public double getPerimeter() {
-        return getSide() * 4;
-    }
-
-    /**
-     * An especially short bit of Javadoc.
-     */
     @Override
     public String toString() {
-        return "Square[" + "side=" + getSide()
-                + ",color=" + color
-                + ",filled=" + filled
-                + ']';
+        Point topLeft = super.getTopLeft();
+        return "Square[topLeft=" + topLeft
+                + ",side=" + (double) Math.round(getSide() * 10) / 10
+                + ",color=" + getColor()
+                + ",filled=" + isFilled() + "]";
     }
 }
