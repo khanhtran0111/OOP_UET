@@ -1,4 +1,4 @@
-package com.khanhtran0111;
+// package com.khanhtran0111;
 import java.awt.*;
 
 public class Rectangle extends Shape {

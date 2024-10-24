@@ -1,4 +1,4 @@
-package com.khanhtran0111;
+// package com.khanhtran0111;
 
 public class Square extends Rectangle {
 
