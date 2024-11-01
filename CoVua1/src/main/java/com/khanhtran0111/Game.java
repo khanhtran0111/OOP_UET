@@ -39,7 +39,7 @@ public class Game {
     }
 
     /**
-     * ligma.
+     * ligma.ball.
      */
     public ArrayList<Move> getMoveHistory() {
         return moveHistory;
