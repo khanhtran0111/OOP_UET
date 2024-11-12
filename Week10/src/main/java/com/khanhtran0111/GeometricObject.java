@@ -1,9 +1,9 @@
 package com.khanhtran0111;
 
-public class GeometricObject {
-    double getArea();
+public interface GeometricObject {
+    public double getArea();
 
-    double getPerimeter();
+    public double getPerimeter();
 
-    String getInfo();
+    public String getInfo();
 }

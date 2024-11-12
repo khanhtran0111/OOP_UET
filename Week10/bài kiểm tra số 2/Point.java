@@ -1,5 +1,3 @@
-package com.khanhtran0111;
-
 public class Point {
     public double pointX;
     public double pointY;

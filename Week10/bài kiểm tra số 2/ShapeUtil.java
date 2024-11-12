@@ -1,4 +1,3 @@
-package com.khanhtran0111;
 import java.util.List;
 
 public class ShapeUtil {

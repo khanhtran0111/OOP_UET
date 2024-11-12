@@ -1,12 +1,10 @@
-package com.khanhtran0111;
-
-public class Triangle implements GeometricObject{
+public class Triangle implements GeometricObject {
     private Point p1;
     private Point p2;
     private Point p3;
 
     /**
-     * lmao.
+     * tamgiac.
      */
     public Triangle(Point p1, Point p2, Point p3) throws RuntimeException {
         if ((p1.distance(p2) + p2.distance(p3)) > p3.distance(p1)
@@ -24,24 +22,21 @@ public class Triangle implements GeometricObject{
         return p1;
     }
 
-    public void setP1(Point p1) {
-        this.p1 = p1;
-    }
-
     public Point getP2() {
         return p2;
-    }
-
-    public void setP2(Point p2) {
-        this.p2 = p2;
     }
 
     public Point getP3() {
         return p3;
     }
 
-    public void setP3(Point p3) {
-        this.p3 = p3;
+    /**
+     * area.
+     */
+    public double getArea() {
+        return Math.abs(p1.pointX * (p2.pointY - p3.pointY)
+                + p2.pointX * (p3.pointY - p1.pointY)
+                + p3.pointX * (p1.pointY - p2.pointY)) / 2;
     }
 
     /**
@@ -49,13 +44,13 @@ public class Triangle implements GeometricObject{
      */
     public double getPerimeter() {
         double x1 = p1.distance(p2);
-        double x2 = p2.distance(p3);
-        double x3 = p3.distance(p1);
+        double x2 = p1.distance(p3);
+        double x3 = p2.distance(p3);
         return x1 + x2 + x3;
     }
 
     /**
-     * area.
+     * lmao.
      */
     public String getInfo() {
         return "Triangle[(" + String.format("%.2f", p1.pointX) + ","

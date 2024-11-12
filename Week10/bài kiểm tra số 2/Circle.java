@@ -1,5 +1,3 @@
-package com.khanhtran0111;
-
 public class Circle implements GeometricObject {
     public static final double PI = 3.14;
     private Point center;
@@ -33,7 +31,7 @@ public class Circle implements GeometricObject {
      * lmao.
      */
     public double getArea() {
-        return (PI * PI * radius);
+        return (PI * radius * radius);
     }
 
     /**
