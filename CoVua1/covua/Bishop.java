@@ -1,32 +1,28 @@
 //package com.khanhtran0111;
 
-public class Rook extends Piece {
-    public Rook(int x, int y) {
+public class Bishop extends Piece {
+    public Bishop(int x, int y) {
         super(x, y);
     }
 
-    public Rook(int x, int y, String color) {
+    public Bishop(int x, int y, String color) {
         super(x, y, color);
     }
 
     @Override
     public String getSymbol() {
-        return "R";
+        return "B";
     }
 
     /**
-     * checking xem co the di chuyen duoc hay khong.
+     * lmao.
      */
     @Override
     public boolean canMove(Board board, int x, int y) {
         int deltaX = x - getCoordinatesX();
         int deltaY = y - getCoordinatesY();
 
-        if (deltaY == 0 && deltaX == 0) {
-            return true;
-        }
-
-        if (Math.abs(deltaX) != 0 && Math.abs(deltaY) != 0) {
+        if (Math.abs(deltaX) != Math.abs(deltaY)) {
             return false;
         }
 
@@ -36,7 +32,7 @@ public class Rook extends Piece {
         int currentX = getCoordinatesX() + stepX;
         int currentY = getCoordinatesY() + stepY;
 
-        while (currentX != x || currentY != y) {
+        while (currentX != x && currentY != y) {
             Piece check = board.getAt(currentX, currentY);
             if (check != null) {
                 return false;
@@ -52,5 +48,4 @@ public class Rook extends Piece {
             return !pieceAtDestination.getColor().equals(getColor());
         }
     }
-
 }

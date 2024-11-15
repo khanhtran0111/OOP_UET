@@ -1,6 +1,6 @@
 package com.khanhtran0111;
 
-public class Bishop extends Piece{
+public class Bishop extends Piece {
     public Bishop(int x, int y) {
         super(x, y);
     }

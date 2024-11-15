@@ -11,7 +11,7 @@ public class Move {
     /**
      * di chuyen.
      */
-    public Move(int startX, int endX, int startY, int endY, Piece movedPiece) {
+    public Move(int startX, int startY, int endX, int endY, Piece movedPiece) {
         this.startX = startX;
         this.startY = startY;
         this.endX = endX;
@@ -22,7 +22,7 @@ public class Move {
     /**
      * di chuyen.
      */
-    public Move(int startX, int endX, int startY, int endY, Piece movedPiece, Piece killedPiece) {
+    public Move(int startX, int startY, int endX, int endY, Piece movedPiece, Piece killedPiece) {
         this.startX = startX;
         this.startY = startY;
         this.endX = endX;

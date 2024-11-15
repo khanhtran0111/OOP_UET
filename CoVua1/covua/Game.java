@@ -1,6 +1,5 @@
 //package com.khanhtran0111;
 import java.util.ArrayList;
-import java.util.ArrayList;
 
 public class Game {
     private Board board;
@@ -38,7 +37,7 @@ public class Game {
     }
 
     /**
-     * ligma.
+     * ligma.ball.
      */
     public ArrayList<Move> getMoveHistory() {
         return moveHistory;

@@ -8,7 +8,6 @@ public class Board {
     private ArrayList<Piece> pieces;
 
     Board() {
-        pieces  = new ArrayList<>();
 
     }
 
